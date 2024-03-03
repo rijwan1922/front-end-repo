@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <button class="btn"  id="1"></button>
+     <button class="btn" id ="2">sumbit</button>
+      <button class="btn" id ="3">sumbit</button>
+      <button class="btn" id ="4">sumbit</button>
+      <button class="btn" id ="5">sumbit</button>
+      <button class="btn" id ="6">sumbit</button>
+      <script>
+       //   document.querySelector("button").onlick = function() {
+         //   let a = document.querySelectorAll("button");
+           // for(let i = 0; i < 6 ; i++){
+           // console.log("a")
+         // }
+        //};
+        
+         let a = document.querySelectorAll(".btn");
+         console.log(a)
+         for(let i = 0; i<a.length; i++){
+            a[i].onclick = function(e){
+                console.log(e.target.id);
+                console.log ("hello world");
+            }
+         }
+      </script>
+</body>
+</html>

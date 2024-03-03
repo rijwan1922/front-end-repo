@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <button id = "btn" >print</button>
+    <button id = "red" >red</button>
+    <button id = "green" >green</button>
+    <button id = "italic" >italic</button>
+    <button id = "plus" >plus</button>
+    <button id = "minus" >minus</button>
+    <h1 id ="h1"></h1>
+
+    <script>
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("h1").innerText= "hello users";
+         };
+
+         document.getElementById("red").onclick = function () {
+            document.getElementById("h1").style.color= "red";
+         };
+
+         document.getElementById("green").onclick = function () {
+            document.getElementById("h1").style.color= "green";
+         };
+
+         document.getElementById("italic").onclick = function () {
+            document.getElementById("h1").style.fontStyle= "italic";
+         };
+          
+         document.getElementById("plus").onclick = function () {
+            document.getElementById("h1").style.fontsize= "60px";
+         };
+          
+         document.getElementById("minus").onclick = function () {
+            document.getElementById("h1").style.fontsize= "small";
+         };
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .rijwan{
+             height: 50px;
+            width: 50px;
+
+        }
+        .box{
+
+            display: inline-block;
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
+           
+    
+</head>
+<body>
+    
+    <script>
+
+         let data = fetch("https://dummyjson.com/recipes");
+         data.then((Response) => {
+            Response.json().then ( (result) => {
+                for(let i of result.recipes){
+
+                    let d = document.createElement("div");
+                    let im = document.createElement("img");
+                    let p = document.createElement("p");
+                    let price = document.createElement("p");
+                    d.setAttribute("class","box");
+                    p.innerText = i.name
+                    im.src =i.image
+                    price.innerText = "price :" +i.caloriesperservice
+                    d.appendChild(im)
+                    d.appendChild(p)
+                    d.appendChild(price)
+                    document.body.append(d)
+                    console.log(i)
+                }
+                })
+         })
+    </script>
+</body>
+</html>
